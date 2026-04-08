@@ -6,6 +6,11 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
+# Вот эта магия уберет предупреждение
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
